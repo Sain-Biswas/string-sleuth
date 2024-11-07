@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KMP Pattern Matching</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="formContainer">
+        <div class="form">
+          <div class="formHead">
+            <h2>KMP Pattern Matching Algorithm</h2>
+            <p>Enter details below to continue</p>
+          </div>
+          <label for="textInput">Text</label>
+          <textarea name="textInput" id="textInput" rows="4"></textarea>
+          <label for="patternInput">Pattern</label>
+          <input type="text" id="patternInput" placeholder="Enter pattern" />
+          <button onclick="kmpSearch()">Check for Match</button>
+        </div>
+      </section>
+      <section class="outContainer">
+        <div id="lpsArray">
+          <p>LPS ARRAY</p>
+          <div class="lpsArrayContainer" id="lpsArrayContainer"></div>
+        </div>
+
+        <p class="outHeading">Found at Indexes</p>
+        <div id="foundAt"></div>
+
+        <p class="outHeading">Given Text with highlight</p>
+        <div id="highlightedText"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

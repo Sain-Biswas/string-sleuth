@@ -1,0 +1,179 @@
+:root {
+  --background: 240 21.052631735801697% 14.901961386203766%; /* base */
+  --foreground: 226 63.93442749977112% 88.03921341896057%; /* text */
+
+  --muted: 237 16.239316761493683% 22.94117659330368%; /* surface0 */
+  --muted-foreground: 227 35.29411852359772% 80.0000011920929%; /* subtext1 */
+
+  --popover: 240 21.052631735801697% 14.901961386203766%; /* base */
+  --popover-foreground: 226 63.93442749977112% 88.03921341896057%; /* text */
+
+  --card: 240 21.052631735801697% 14.901961386203766%; /* base */
+  --card-foreground: 226 63.93442749977112% 88.03921341896057%; /* text */
+
+  --border: 234 13.20754736661911% 31.176471710205078%; /* surface1 */
+  --input: 234 13.20754736661911% 31.176471710205078%; /* surface1 */
+
+  --primary: 267 83.50515365600586% 80.98039031028748%; /* accent - Mauve */
+  --primary-foreground: 240 21.052631735801697% 14.901961386203766%; /* base */
+
+  --secondary: 237 16.239316761493683% 22.94117659330368%; /* surface0 */
+  --secondary-foreground: 226 63.93442749977112% 88.03921341896057%; /* text */
+
+  --accent: 237 16.239316761493683% 22.94117659330368%; /* surface0 */
+  --accent-foreground: 226 63.93442749977112% 88.03921341896057%; /* text */
+
+  --destructive: 343 81.25% 74.90196228027344%; /* red */
+  --destructive-foreground: 240 21.311475336551666% 11.96078434586525%; /* mantle */
+
+  --ring: 226 63.93442749977112% 88.03921341896057%; /* text */
+
+  --success: 115 54.09836173057556% 76.07843279838562%; /* green */
+  --success-foreground: 240 21.052631735801697% 14.901961386203766%; /* base */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+}
+.formHead {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.formHead h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.125rem;
+}
+
+.formHead p {
+  font-size: 0.875remrem;
+}
+
+.form {
+  border: 1px solid hsl(var(--ring));
+  display: flex;
+  flex-direction: column;
+  width: min(95vw, 30rem);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+label {
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+}
+textarea,
+input {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--input));
+  color: hsl(var(--foreground));
+  border-radius: 0.5rem;
+  width: 100%;
+}
+button {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  width: 10rem;
+  margin-left: auto;
+}
+.formContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#highlightedText {
+  margin-top: 20px;
+  font-weight: bold;
+  white-space: pre-wrap; /* Preserves whitespace */
+}
+.highlight {
+  background-color: hsl(var(--success));
+  color: hsl(var(--success-foreground));
+  font-weight: bold;
+}
+
+#lpsArray {
+  font-size: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#lpsArray p {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.lpsBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lpsArrayContainer {
+  display: flex;
+}
+
+.lpsIndex {
+  border: 1px solid hsl(var(--ring));
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.outHeading {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.found {
+  color: hsl(var(--success));
+}
+
+.notFound {
+  color: hsl(var(--destructive));
+}
+
+@media (min-width: 1300px) {
+  .container {
+    flex-direction: row;
+  }
+}
